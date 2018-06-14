@@ -20,7 +20,7 @@ router.get('/register', (req, res) => {
 
 //Login form POST
 router.post('/login', (req, res, next) => {
-    let func=passport.authenticate('local', {
+    passport.authenticate('local', {
         successRedirect: '/ideas',
         failureRedirect: '/users/login',
         failureFlash: true
